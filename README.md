@@ -8,7 +8,7 @@
 Welcome to the Student Grade Tracker, a robust and interactive console-based Java application developed as part of the CodeAlpha Internship.
 
 This project simulates a comprehensive grading environment. It allows educators to input student details, automatically calculate performance metrics, generate analytical reports, and manage academic records—all backed by a secure MySQL database to ensure data persistence and reliable tracking.
-
+---
 ✨ Features
 
 Comprehensive Student Management: Seamlessly add new student records, view the entire roster, and instantly search for individual student details using a unique auto-generated Student ID.
@@ -24,12 +24,11 @@ Robust Database Integration: Utilizes JDBC to store all student data in a MySQL 
 
 
 Input Validation: Built-in loops ensure users enter valid marks (between 0 and 100) before processing the data, preventing faulty database entries.
-
+---
 🏗️ Architecture & Design
 This project strictly adheres to Object-Oriented Programming (OOP) principles and implements the DAO (Data Access Object) Pattern to maintain a clean separation of concerns, making the code modular and enterprise-ready:
-
+---
 Project Structure
-Plaintext
 📦 src
  ┣ 📂 Models
  ┃ ┗ 📜 Student.java                 # Represents individual student data, encapsulates marks, and calculates grading logic
@@ -39,4 +38,4 @@ Plaintext
  ┃ ┗ 📜 StudentDataAccessObject.java # Handles all raw SQL queries (INSERT, SELECT) and database fetching logic
  ┗ 📂 Controller
    ┣ 📜 Main.java                    # The main entry point to launch the application
-   ┗ 📜 GradeTracker.java            # Manages the interactive console UI, user inputs
+   ┗ 📜 GradeTracker.java            # Manages the interactive console UI and user inputs
