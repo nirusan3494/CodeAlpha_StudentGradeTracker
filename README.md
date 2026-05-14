@@ -31,13 +31,9 @@ This project strictly adheres to Object-Oriented Programming (OOP) principles an
 
 Project Structure
 ---
-📦 src
- ┣ 📂 Models
- ┃ ┗ 📜 Student.java                 # Represents individual student data, encapsulates marks, and calculates grading logic
- ┣ 📂 Database & DAO
- ┃ ┣ 📜 DataBaseConfig.java          # Securely loads database credentials from a db.properties file
- ┃ ┣ 📜 DatabaseCon.java             # Establishes and returns the JDBC connection to MySQL
- ┃ ┗ 📜 StudentDataAccessObject.java # Handles all raw SQL queries (INSERT, SELECT) and database fetching logic
- ┗ 📂 Controller
-   ┣ 📜 Main.java                    # The main entry point to launch the application
-   ┗ 📜 GradeTracker.java            # Manages the interactive console UI and user inputs
+src/Models/Student.java - Represents individual student data, encapsulates marks, and calculates grading logic
+src/Database & DAO/DataBaseConfig.java - Securely loads database credentials from a db.properties file
+src/Database & DAO/DatabaseCon.java - Establishes and returns the JDBC connection to MySQL
+src/Database & DAO/StudentDataAccessObject.java - Handles all raw SQL queries (INSERT, SELECT) and database fetching logic
+src/Controller/Main.java - The main entry point to launch the application
+src/Controller/GradeTracker.java - Manages the interactive console UI and user inputs
