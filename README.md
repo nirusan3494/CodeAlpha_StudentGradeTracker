@@ -1,38 +1,42 @@
-# 🏨 Hotel Reservation System
+# 📊 Student Grade Tracker
 
 ![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-Server-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 ![JDBC](https://img.shields.io/badge/JDBC-Data_Access-blue?style=for-the-badge)
 
-[cite_start]Welcome to the **Hotel Reservation System**, a robust and interactive console-based Java application developed as part of the **CodeAlpha Internship**[cite: 98]. 
 
-[cite_start]This project simulates a real-world hotel booking environment[cite: 98]. [cite_start]It allows users to search for available rooms across different categories, process simulated payments, generate unique booking IDs, and manage their reservations—all backed by a secure MySQL database to ensure data persistence and transaction integrity[cite: 98].
+Welcome to the Student Grade Tracker, a robust and interactive console-based Java application developed as part of the CodeAlpha Internship.
 
----
+This project simulates a comprehensive grading environment. It allows educators to input student details, automatically calculate performance metrics, generate analytical reports, and manage academic records—all backed by a secure MySQL database to ensure data persistence and reliable tracking.
 
-## ✨ Features
+✨ Features
 
-- [cite_start]**Dynamic Room Browsing:** Search and view real-time available rooms categorized by type (Standard, Deluxe, Suite) and price per night[cite: 99].
-- [cite_start]**Booking & Payment Simulation:** Execute reservations with a built-in payment simulation[cite: 100]. [cite_start]The system validates sufficient funds before confirming the booking and calculates any change due[cite: 101].
-- [cite_start]**Reservation Management:** Instantly retrieve detailed booking information using a unique Reservation ID, or cancel active reservations to free up room availability[cite: 102].
-- [cite_start]**Real-Time Data Sync:** Availability statuses are dynamically updated in the database the moment a room is booked or a reservation is canceled[cite: 103].
-- [cite_start]**ACID Compliant Transactions:** Uses JDBC `setAutoCommit(false)` to ensure that marking a room as unavailable and logging the reservation happen simultaneously[cite: 104]. [cite_start]If one fails, the entire booking rolls back to prevent orphaned data[cite: 105].
+Comprehensive Student Management: Seamlessly add new student records, view the entire roster, and instantly search for individual student details using a unique auto-generated Student ID.
 
----
 
-## 🏗️ Architecture & Design
+Automated Grade Computation: Automatically calculates total marks, average scores, letter grades (A+ to F), and Pass/Fail statuses based on inputted subject marks during object instantiation.
 
-[cite_start]This project strictly adheres to Object-Oriented Programming (OOP) principles and implements the **DAO (Data Access Object) Pattern** to maintain a clean separation of concerns, making the code modular and enterprise-ready[cite: 106]:
 
-### Project Structure
-```text
+Performance Analytics: Quickly identify class trends by generating a Class Summary Report (showing total students, highest/lowest averages, and class average), or fetch specific milestones like the Class Topper and the Lowest Scorer.
+
+
+Robust Database Integration: Utilizes JDBC to store all student data in a MySQL database, ensuring that academic records are securely persisted beyond a single application session.
+
+
+Input Validation: Built-in loops ensure users enter valid marks (between 0 and 100) before processing the data, preventing faulty database entries.
+
+🏗️ Architecture & Design
+This project strictly adheres to Object-Oriented Programming (OOP) principles and implements the DAO (Data Access Object) Pattern to maintain a clean separation of concerns, making the code modular and enterprise-ready:
+
+Project Structure
+Plaintext
 📦 src
  ┣ 📂 Models
- ┃ ┣ 📜 Room.java               # Represents individual hotel rooms, pricing, and categories
- ┃ ┗ 📜 Reservation.java        # Represents a booking linking a guest to a specific Room
+ ┃ ┗ 📜 Student.java                 # Represents individual student data, encapsulates marks, and calculates grading logic
  ┣ 📂 Database & DAO
- ┃ ┣ 📜 DataBaseConfig.java     # Securely loads database credentials from db.properties
- ┃ ┣ 📜 DataBaseConnection.java # Establishes the JDBC connection
- ┃ ┗ 📜 HotelDAO.java           # Handles all raw SQL queries, JOINs, and DB transactions
+ ┃ ┣ 📜 DataBaseConfig.java          # Securely loads database credentials from a db.properties file
+ ┃ ┣ 📜 DatabaseCon.java             # Establishes and returns the JDBC connection to MySQL
+ ┃ ┗ 📜 StudentDataAccessObject.java # Handles all raw SQL queries (INSERT, SELECT) and database fetching logic
  ┗ 📂 Controller
-   ┗ 📜 HotelReservationSystem.java # The main entry point and interactive console UI
+   ┣ 📜 Main.java                    # The main entry point to launch the application
+   ┗ 📜 GradeTracker.java            # Manages the interactive console UI, user inputs
