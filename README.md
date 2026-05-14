@@ -40,4 +40,4 @@ Project Structure
  ┃ ┗ 📜 StudentDataAccessObject.java # Handles all raw SQL queries (INSERT, SELECT) and database fetching logic
  ┗ 📂 Controller
    ┣ 📜 Main.java                    # The main entry point to launch the application
-   ┗ 📜 GradeTracker.java            # Manages the interactive console UI and user inputs
+   ┗ 📜 GradeTracker.java            # Manages the interactive console UI and user inputss
